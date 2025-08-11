@@ -1,0 +1,36 @@
+sylius_twig_hooks:
+    hooks:
+        'sylius_shop.product.show.content.info.summary':
+            webgriffe_bisn_add_subscription:
+                template: '@WebgriffeSyliusBackInStockNotificationPlugin/_addSubscription.html.twig'
+                priority: 350
+            webgriffe_bisn_add_configurable_button: 
+                template: '@WebgriffeSyliusBackInStockNotificationPlugin/_configurableButton.html.twig'
+                priority: 360
+        'sylius_shop.base#javascripts':
+            webgriffe_bisn_add_javascript:
+                template: '@WebgriffeSyliusBackInStockNotificationPlugin/_javascript.html.twig'
+
+        'sylius_shop.account.webgriffe_bisn.subscription.index.content':
+            breadcrumbs:
+                template: '@WebgriffeSyliusBackInStockNotificationPlugin/MyAccount/breadcrumbs.html.twig'
+                priority: 200
+            menu:
+                template: '@SyliusShop/account/common/content/menu.html.twig'
+                priority: 100
+            main:
+                template: '@WebgriffeSyliusBackInStockNotificationPlugin/MyAccount/main.html.twig'
+                priority: 0
+
+        'sylius_shop.account.webgriffe_bisn.subscription.index.content.main':
+            grid:
+                template: '@SyliusShop/shared/grid.html.twig'
+                priority: 0
+
+        'sylius_shop.account.webgriffe_bisn.subscription.index.content.main.header':
+            title:
+                template: '@WebgriffeSyliusBackInStockNotificationPlugin/MyAccount/header/title.html.twig'
+                priority: 100
+            subtitle:
+                template: '@WebgriffeSyliusBackInStockNotificationPlugin/MyAccount/header/subtitle.html.twig'
+                priority: 0

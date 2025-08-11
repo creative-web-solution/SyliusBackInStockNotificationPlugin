@@ -18,8 +18,6 @@ use Webgriffe\SyliusBackInStockNotificationPlugin\Repository\SubscriptionReposit
 
 final class AlertCommand extends Command
 {
-    protected static $defaultName = 'webgriffe:back-in-stock-notification:alert';
-
     public function __construct(
         private LoggerInterface $logger,
         private SenderInterface $sender,
@@ -34,6 +32,7 @@ final class AlertCommand extends Command
     protected function configure(): void
     {
         $this
+            ->setName('webgriffe:back-in-stock-notification:alert')
             ->setDescription('Send an email to the user if the product is returned in stock')
             ->setHelp('Check the stock status of the products in the webgriffe_back_in_stock_notification table and send and email to the user if the product is returned in stock')
         ;

@@ -1,6 +1,7 @@
 {# @var \Sylius\Component\Core\Model\ProductInterface product #}
 {# @var \Sylius\Component\Core\Model\ProductVariantInterface variant #}
 
+{% set product = hookable_metadata.context.product %}
 {% set variant = product|sylius_resolve_variant %}
 
 {% if product.isConfigurable %}

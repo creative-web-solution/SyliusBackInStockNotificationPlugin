@@ -4,7 +4,7 @@ services:
         arguments:
             - '@monolog.logger'
             - '@sylius.email_sender'
-            - '@sylius.availability_checker.default'
+            - '@sylius.checker.inventory.availability'
             - '@webgriffe.repository.back_in_stock_notification_subscription'
             - '@router'
     
@@ -16,7 +16,7 @@ services:
             - '@sylius.context.channel.cached'
             - '@translator'
             - '@sylius.context.customer'
-            - '@sylius.availability_checker.default'
+            - '@sylius.checker.inventory.availability'
             - '@sylius.repository.product_variant'
             - '@sylius.email_sender'
             - '@sylius.context.locale'
@@ -37,7 +37,7 @@ services:
         
     Webgriffe\SyliusBackInStockNotificationPlugin\Twig\AvailabilityRuntime:
         arguments:
-            - '@sylius.availability_checker.default'
+            - '@sylius.checker.inventory.availability'
         tags:
             - { name: twig.runtime }
     

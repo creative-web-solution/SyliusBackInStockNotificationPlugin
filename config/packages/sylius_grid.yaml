@@ -15,7 +15,7 @@ sylius_grid:
                     label: sylius.ui.image
                     path: productVariant.product
                     options:
-                        template: "@SyliusAdmin/Product/Grid/Field/image.html.twig"
+                        template: "@SyliusAdmin/shared/helper/product_image.html.twig"
                 product_variant_code:
                     type: string
                     label: sylius.ui.code

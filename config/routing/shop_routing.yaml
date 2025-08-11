@@ -11,7 +11,7 @@ webgriffe_back_in_stock_notification_delete_subscription:
         _controller: Webgriffe\SyliusBackInStockNotificationPlugin\Controller\SubscriptionController::deleteAction
 
 webgriffe_back_in_stock_notification_account_list_subscriptions:
-    path: /account/back-in-stock-notification
+    path: /{_locale}/account/back-in-stock-notification
     methods: [ GET ]
     defaults:
         _controller: webgriffe.controller.back_in_stock_notification_subscription::indexAction

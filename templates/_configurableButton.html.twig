@@ -1,3 +1,4 @@
+{% set product = hookable_metadata.context.product %}
 {% if product.isConfigurable %}
     <div id="sylius-variants-stock"
          data-option-code="{{ product.variants.first.optionValues|map(optionValue => "#{optionValue.optionCode}")|json_encode }}">

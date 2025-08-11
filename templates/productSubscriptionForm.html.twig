@@ -1,4 +1,5 @@
 {% form_theme form '@SyliusShop/Form/theme.html.twig' %}
+{% import '@SyliusShop/shared/buttons.html.twig' as buttons %}
 
 <div class="ui segment" style="margin-top: 5px">
     <h4 class="ui dividing header">{{ 'webgriffe_bisn.product_page.stock_notify_title'|trans }}</h4>
@@ -19,7 +20,7 @@
     }}) }}
 
     {{ form_row(form.submit, {
-        'attr': {'class': 'ui huge primary icon labeled button'},
+        'attr': {'class': 'btn btn-primary'},
     }) }}
 
     {{ form_row(form._token) }}

@@ -34,3 +34,7 @@ webgriffe_bisn:
         show_customer: 'Mostra cliente'
         notified: 'Notificato'
         not-notified: 'Non notificato'
+
+webgriffe:
+    ui:
+        back_in_stock_notification_subscriptions: 'Notifiche prodotti non disponibili'
